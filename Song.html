@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Playlist</title>
+  <style>
+    /* Global styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: rebeccapurple;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+    }
+
+    /* Song styles */
+    .song {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .song:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .song img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .song:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .song-details {
+      flex: 1;
+    }
+
+    .song-details h2 {
+      margin-bottom: 5px;
+      color: rebeccapurple;
+    }
+
+    .song-details p {
+      margin: 0;
+      color: #666;
+    }
+
+    .audio-player {
+      width: 100%;
+      max-width: 300px;
+      margin-top: 10px;
+      background-color: rebeccapurple;
+      border-radius: 4px;
+      padding: 10px;
+    }
+
+    .back-button-container {
+      margin-top: 20px;
+      padding-left: 0.5cm;
+    }
+
+    .back-button-container a {
+      text-decoration: none;
+      background-color: white;
+      color: rebeccapurple;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .back-button-container a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="back-button-container">
+    <a href="favourite.html" class="fancy-link">Back</a>
+  </div>
+
+  <div class="container">
+    <!-- Song 1 -->
+    <div class="song">
+      <img src="images/before you.png" alt="Song 1">
+      <div class="song-details">
+        <h2>Before You</h2>
+        <p>Artist: Benson Boone</p>
+        <audio class="audio-player" controls>
+          <source src="song/Benson Boone - Before You.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <!-- Song 2 -->
+    <div class="song">
+      <img src="images/director cut.png" alt="Song 2">
+      <div class="song-details">
+        <h2>Thanks</h2>
+        <p>Artist: Seventeen</p>
+        <audio class="audio-player" controls>
+          <source src="song/SEVENTEEN - Thanks.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <!-- Song 3 -->
+    <div class="song">
+      <img src="images/eve.png" alt="Song 3">
+      <div class="song-details">
+        <h2>Kokoron</h2>
+        <p>Artist: Eve</p>
+        <audio class="audio-player" controls>
+          <source src="song/Eve - Kokoron.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <!-- Song 4 -->
+    <div class="song">
+      <img src="images/xoxo.png" alt="Song 4">
+      <div class="song-details">
+        <h2>Lucky</h2>
+        <p>Artist: EXO</p>
+        <audio class="audio-player" controls>
+          <source src="song/Lucky.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <!-- Song 5 -->
+    <div class="song">
+      <img src="images/wing.png" alt="Song 5">
+      <div class="song-details">
+        <h2>Amygdala</h2>
+        <p>Artist: Agust D</p>
+        <audio class="audio-player" controls>
+          <source src="song/Agust D - Amygdala.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <!-- Song 6 -->
+    <div class="song">
+      <img src="images/imsoniack.png" alt="Song 6">
+      <div class="song-details">
+        <h2>Reminisensi</h2>
+        <p>Artist: Imsoniack</p>
+        <audio class="audio-player" controls>
+          <source src="song/Insomniacks - Reminisensi.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <!-- Song 7 -->
+    <div class="song">
+      <img src="images/jejak.png" alt="Song 7">
+      <div class="song-details">
+        <h2>Hingga Tua Bersama</h2>
+        <p>Artist: Rizky Febian</p>
+        <audio class="audio-player" controls>
+          <source src="song/Rizky Febian - Hingga Tua Bersama.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <!-- Song 8 -->
+    <div class="song">
+      <img src="images/yoasobi.png" alt="Song 8">
+      <div class="song-details">
+        <h2>Racing Into The Night</h2>
+        <p>Artist: Yoasobi</p>
+        <audio class="audio-player" controls>
+          <source src="song/YOASOBI - Racing Into The Night.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<a href="#" class="stt" title="scroll to top"></a>
+
+</html>

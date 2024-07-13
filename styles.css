@@ -1,0 +1,273 @@
+/* This is for the whole website's background color */
+body {
+  padding: 25px;
+  font-size: 15px;
+  font-family: cursive;
+  color: white; /* Adjust text color for better contrast */
+}
+
+
+/* Navigation bar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center; /* Adjusted to center vertically */
+  justify-content: space-between;
+  padding: 0.5cm 10%; /* Adjusted padding for top and bottom */
+  height: 3rem; /* Adjusted height */
+  background-color: rebeccapurple;
+  font-family: cursive;
+}
+
+header .navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* Adjusted to push items to the right */
+  align-items: center; /* Adjusted alignment */
+}
+
+header .navbar li {
+  margin-left: 1.5rem; /* Adjusted margin */
+}
+
+header .navbar ul li a {
+  font-size: 1rem; /* Adjusted font size */
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.04rem;
+  transition: 0.2s;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+  color: #b5c3cb;
+  border-bottom: 0.2rem solid #b5c3cb;
+  padding: 0.5rem 0;
+}
+
+
+
+/* hero section starts*/
+.home {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding-left: 70px;
+  padding-top: 70px;
+}
+
+.home .content h2 {
+  font-size: 50px;
+  color: #7889a4;
+}
+
+.home .content h2 span {
+  font-size: 70px;
+  color: seashell;
+}
+
+/* gambar nad*/
+.center-right {
+  position: absolute;
+  top: 50%;
+  right: 180px;
+  transform: translate(0, -50%);
+  border-radius: 50%;
+  width: 180px; /* Adjust the width to your desired size */
+  height: auto; /* Maintain aspect ratio */
+}
+/* hero section end */
+
+
+
+/*NEXT PAGE LINK*/
+.fancy-link {
+  font-size: 20px;
+  font-weight: bold;
+  color: rebeccapurple; /* Blue color */
+  text-decoration: none; /* Remove underline */
+  border: 2px solid white; /* Blue border */
+  padding: 10px 20px; /* Add padding */
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition */
+
+  /* Optional: Hover effect */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fancy-link:hover {
+  background-color: rebeccapurple; /* Blue background */
+  color: white; /* White text */
+}
+
+
+
+/*image game start*/
+div.gallery {
+  border: 1px solid rgb(red, green, blue);
+  width: 275px;
+}
+
+div.gallery:hover {
+  border: 1px solid white;
+}
+
+div.gallery img {
+  width: 90%;
+  height: auto;
+  padding-left: 0.7cm;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-family:cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+      width: 49.99999%;
+      margin: 6px ;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+      width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Transparent image text kat about me*/
+.container {
+  position: relative;
+  max-width: 600px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center it */
+}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Align it to the center horizontally */
+  transform: translateX(-50%); /* Center it perfectly */
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 95%; /* Set the width to 100% to match the image container */
+  height: 1; /* Set the height to 100% to match the image container */
+  padding: 20px;
+}
+
+
+/* Update the image size to match the container */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* FORM*/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid rebeccapurple; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: rebeccapurple;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+/* FAMILY PICTURE */
+/* Three columns side by side */
+.column {
+  float: left;
+  width: 5.9cm;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  background-color: rebeccapurple;
+  
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.title {
+  color: black;
+}
+
+/* SCROLL TO TOP BUTTON */
+.stt {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: white url('images/arrow.png') center no-repeat; /* Replace 'arrow-up.png' with your arrow image path */
+  background-size: 60%; /* Adjust the size of the arrow image as needed */
+  opacity: 0.7;
+  transition: opacity 0.3s ease; /* Smooth transition on opacity */
+}
+.stt:hover {
+  opacity: 0.8;
+}
+.stt:focus {
+  opacity: 0.9;
+}
+.stt:active {
+  opacity: 1;
+}
+:root { 
+  scroll-behavior: smooth; 
+}

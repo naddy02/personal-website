@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Holiday</title>
+
+    <style>
+        /* Additional inline CSS for the description layout */
+        .desc {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<!-- Navigation bar start -->
+<header>
+  <nav class="navbar">
+    <ul>
+
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="favourite.html">Favourite</a></li>
+      <li><a href="Holiday.html">Holiday</a></li>
+      <li><a href="Family.html">Family</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="Resume.html">Resume</a></li>
+
+    </ul>
+    
+</nav>
+</header>
+<!-- Navigation bar end -->
+
+
+<style>
+  
+  .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 20px;
+}
+
+    .flag-container {
+      position: relative;
+      cursor: pointer;
+    }
+    .flag-container img {
+      width: 140px;
+      height: auto;
+    }
+    .description {
+      display: none;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    .flag-container:hover .description {
+      display: block;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding-top: 60px;
+      color: black;
+    }
+    .modal-content {
+      background-color: #b5c3cb;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+      position: relative;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    body {
+      background-color: plum;
+          background-size: cover; /* Cover the entire page */
+          background-position: center; /* Center the image */
+          background-repeat: no-repeat; /* Do not repeat the image */
+          margin: 0;
+          padding: 200;
+        }
+
+        .blur-bg-container {
+            position: relative;
+            display: inline-block;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+            backdrop-filter: blur(1px); /* Blur effect */
+            border-radius: 10px; /* Rounded corners for aesthetics */
+        }
+        .blur-bg-text {
+            color: black;
+            font-size: 13px;
+            font-family: cursive;
+            text-align: center;
+        }
+  </style>
+</head>
+
+<body>
+
+    <h2 style="color: rebeccapurple; padding-top: 0.5cm; font-size: 25px; font-family: cursive; text-align: center;">🛩PLACES I HAVE BEEN TO🛩</h2>
+    <div class="blur-bg-container">
+      <p class="blur-bg-text">
+          I really love traveling to different places around the world. I've been lucky enough to go to 12 awesome destinations. Each place has its own special charm, from big cities to quiet spots. I've seen amazing things, like beautiful nature and cool traditions. One of my favorite things is trying new foods! Now, I wanna share my adventures with everyone.</p>
+      
+  </div>   
+   <p style="color: rebeccapurple; font-size: 14px; text-align: center;">Click on the flag to know more details!</p>
+
+<div class="container">
+  <div class="flag-container" onclick="openModal('modal1')">
+    <img src="images/selangor.png" >
+    <div class="description">Selangor</div>
+  </div>
+  <div class="flag-container" onclick="openModal('modal2')">
+    <img src="images/negeri sembilan.png" >
+    <div class="description">Negeri Sembilan</div>
+  </div>
+  <div class="flag-container" onclick="openModal('modal3')">
+    <img src="images/perak.png" >
+    <div class="description">Perak</div>
+  </div>
+  <div class="flag-container" onclick="openModal('modal4')">
+    <img src="images/melaka.png" >
+    <div class="description">Melaka</div>
+  </div>
+  <div class="flag-container" onclick="openModal('modal5')">
+    <img src="images/johor.png" >
+    <div class="description">Johor</div>
+  </div>
+  <div class="flag-container" onclick="openModal('modal6')">
+    <img src="images/pahang.png" >
+    <div class="description">Pahang</div>
+  </div>
+  <div class="flag-container" onclick="openModal('modal7')">
+    <img src="images/terengganu.png" >
+    <div class="description">Terengganu</div>
+  </div>
+  <div class="flag-container" onclick="openModal('modal8')">
+    <img src="images/kelantan.png" >
+    <div class="description">Kelantan</div>
+  </div>
+  <div class="flag-container" onclick="openModal('modal9')">
+    <img src="images/pulau pinang.png" >
+    <div class="description">Pulau Pinang</div>
+  </div>
+  <div class="flag-container" onclick="openModal('modal10')">
+    <img src="images/kedah.png" >
+    <div class="description">Kedah</div>
+  </div>
+  <div class="flag-container" onclick="openModal('modal11')">
+    <img src="images/perlis.png" >
+    <div class="description">Perlis</div>
+  </div>
+  <div class="flag-container" onclick="openModal('modal12')">
+    <img src="images/sabah.png" >
+    <div class="description">Sabah</div>
+  </div>
+</div>
+
+<!-- Modals for detailed information -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h2>Selangor</h2>
+    <p>Best place: Sekinchan, iCity Shah Alam to see beautiful light at night, Bukit Broga for hiking activities, Sunway Lagoon for the best water themepark and Pulau Ketam.</p>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h2>Negeri Sembilan</h2>
+    <p>Best places: Variety of BEACH at Port Dickson, Taman Tasik Seremban, Istana Seri Menanti.</p>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <h2>Perak</h2>
+    <p>Best places: Pangkor Island, Gua Tempurung, Kellie's Castle.</p>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+<div class="modal-content">
+  <span class="close" onclick="closeModal('modal4')">&times;</span>
+  <h2>Melaka</h2>
+  <p>Best place: A place full of history which is Bandaraya Bersejarah Melaka, Jonker Street, A Famosa.</p>
+</div>
+</div>
+
+<div id="modal5" class="modal">
+<div class="modal-content">
+  <span class="close" onclick="closeModal('modal5')">&times;</span>
+  <h2>Johor</h2>
+  <p>Best places: Legoland Malaysia, Taman Negara Endau-Rompin, Pulau Tioman.</p>
+</div>
+</div>
+
+<div id="modal6" class="modal">
+<div class="modal-content">
+  <span class="close" onclick="closeModal('modal6')">&times;</span>
+  <h2>Pahang</h2>
+  <p>Best places: Taman Negara, Cameron Highlands, Pulau Tioman.</p>
+</div>
+</div>
+
+<div id="modal7" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal7')">&times;</span>
+    <h2>Terengganu</h2>
+    <p>Best places: Pulau Redang, Pulau Perhentian, Pantai Batu Buruk.</p>
+  </div>
+  </div>
+
+  <div id="modal8" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal8')">&times;</span>
+      <h2>Kelantan</h2>
+      <p>Best places: Kota Bharu, Pasar Siti Khadijah, Pantai Cahaya Bulan.</p>
+    </div>
+    </div>
+
+    <div id="modal9" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal9')">&times;</span>
+        <h2>Pulau Pinang</h2>
+        <p>Best places: Georgetown, Pulau Penang, Kek Lok Si. You can buy a lot chocolate here!</p>
+      </div>
+      </div>
+
+      <div id="modal10" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modal10')">&times;</span>
+          <h2>Kedah</h2>
+          <p>Best places: Pulau Langkawi, Gunung Jerai, Paddy Museum.</p>
+        </div>
+        </div>
+
+        <div id="modal11" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('modal11')">&times;</span>
+            <h2>Perlis</h2>
+            <p>Best places:Georgetown, Pulau Penang, Kek Lok Si.</p>
+          </div>
+          </div>
+
+          <div id="modal12" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('modal12')">&times;</span>
+              <h2>Sabah</h2>
+              <p>Best places: Gunung Kinabalu, Taman Kinabalu, Pulau Sipadan.</p>
+            </div>
+            </div>
+
+<script>
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+  }
+
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    var modals = document.getElementsByClassName('modal');
+    for (var i = 0; i < modals.length; i++) {
+      if (event.target == modals[i]) {
+        modals[i].style.display = "none";
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
